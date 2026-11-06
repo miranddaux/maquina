@@ -1,0 +1,11 @@
+{
+  "title": "Por que existe dia e noite?",
+  "topic": "earth_rotation",
+  "duration": 8,
+  "captions": [
+    {"start": 0, "end": 2.5, "text": "Por que existe\ndia e noite?"},
+    {"start": 2.5, "end": 5.5, "text": "A Terra gira\nem torno de si mesma."},
+    {"start": 5.5, "end": 8, "text": "Uma volta leva\ncerca de 24 horas."}
+  ],
+  "sources": ["https://spaceplace.nasa.gov/days/en/"]
+}

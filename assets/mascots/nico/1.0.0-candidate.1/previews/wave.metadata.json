@@ -1,0 +1,18 @@
+{
+  "title": "NICO · wave (candidato, sem voz)",
+  "mascot": {
+    "id": "nico",
+    "version": "1.0.0-candidate.1",
+    "config_sha256": "eac0ec53d8a15f055d35d639ea7c1fe474a618dae2c25faa86777636e2444278",
+    "geometry_version": "lite-humanoid-1.0.0",
+    "animation_version": "lite-rig-1.0.0"
+  },
+  "source": "r3f_candidate_preview",
+  "preview": true,
+  "script": "Prévia silenciosa do modelo; não é episódio narrado.",
+  "render_time": "frame/fps",
+  "duration": 2.0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920
+}

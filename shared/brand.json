@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "channel_name": "Nicolume",
+  "product_name": "CurioLab 3D",
+  "mascot_id": "nico",
+  "tagline": "Cada peça tem um porquê.",
+  "handle_suggestions": [
+    "@nicolume",
+    "@nicolume3d"
+  ],
+  "availability_checked": false,
+  "social_accounts_created": false,
+  "name_status": "selected_by_user",
+  "name_candidates": [
+    "Nicolume",
+    "Niconexo",
+    "Curinexo",
+    "Miolume",
+    "Pecorama",
+    "Curivio",
+    "Nicorama"
+  ],
+  "rejected_names": [
+    "Mundo em Peças",
+    "Nico Explica"
+  ]
+}

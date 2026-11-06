@@ -1,0 +1,67 @@
+{
+  "title": "O ventilador muda o ar da sala?",
+  "topic": "room_airflow",
+  "duration": 6,
+  "branding": {
+    "name": "",
+    "handle": "",
+    "subject": "Como as coisas funcionam, mostrando uma peça e uma causa de cada vez.",
+    "audience": "Pessoas curiosas que querem entender o mundo com explicações visuais simples.",
+    "tone": "Conversado e didático, como explicar para um amigo; frases curtas e palavras simples.",
+    "prohibited": "Promessas sem comprovação, fatos inventados e termos técnicos sem explicar.",
+    "style": "Ágil, visual e bem-humorado, sem sacrificar a clareza da explicação.",
+    "signature": "",
+    "intro_formula": "Se [tentativa simples], parece funcionar. Mas [falha visível].",
+    "outro_formula": "Agora você tem [sistema completo]. Mostre o resultado antes do convite final.",
+    "comment_cta": "Qual parte você quer ver por dentro no próximo vídeo?",
+    "hashtags": [
+      "#curiosidades",
+      "#comofunciona"
+    ],
+    "thumbnail_recipe": "Pergunta curta no topo, um objeto em foco e uma palavra em destaque. Sem prometer algo que o vídeo não entrega.",
+    "descriptions": {
+      "youtube": "",
+      "instagram": "",
+      "tiktok": ""
+    },
+    "visual_style": "rounded",
+    "character": {
+      "preset": "explorer",
+      "shirt": "#E8BE45",
+      "pants": "#285878",
+      "shoes": "#2E72B8",
+      "hair": "#34251E",
+      "skin": "#DFA16D"
+    },
+    "voice": {
+      "provider": "upload",
+      "voice_id": "",
+      "description": "Português do Brasil, claro e próximo; ritmo definido depois de revisar o roteiro."
+    },
+    "logo_asset_id": null,
+    "cover_asset_id": null,
+    "accent_color": "#F2C94C",
+    "environment": "interior",
+    "palette": {
+      "sky": "#9CCBE0",
+      "ground": "#86A99A"
+    }
+  },
+  "captions": [
+    {
+      "start": 0,
+      "end": 2,
+      "text": "UMA SALA, UM PERSONAGEM"
+    },
+    {
+      "start": 2,
+      "end": 4,
+      "text": "O VENTILADOR ENTRA EM CENA"
+    },
+    {
+      "start": 4,
+      "end": 6,
+      "text": "O AR SE MOVE · MODELO ILUSTRATIVO"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "curiolab-mascot-studio",
+  "version": "1.0.0-candidate.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "node scripts/check-version.mjs && tsc --noEmit && vite build",
+    "test": "node --import tsx tests/mascot.test.ts",
+    "check:version": "node scripts/check-version.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.1.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "three": "0.176.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "@types/three": "0.176.0",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
+  }
+}

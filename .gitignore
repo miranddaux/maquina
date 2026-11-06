@@ -1,0 +1,10 @@
+.local/
+outputs/
+__pycache__/
+*.pyc
+.env
+.venv/
+
+node_modules/
+.agents/skills/
+.claude/skills/

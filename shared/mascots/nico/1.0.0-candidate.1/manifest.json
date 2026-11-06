@@ -1,0 +1,113 @@
+{
+  "id": "nico",
+  "version": "1.0.0-candidate.1",
+  "config_sha256": "eac0ec53d8a15f055d35d639ea7c1fe474a618dae2c25faa86777636e2444278",
+  "assets": [
+    {
+      "kind": "reference",
+      "status": "pending_original_bytes",
+      "name": "NICO reference sheet 1"
+    },
+    {
+      "kind": "reference",
+      "status": "pending_original_bytes",
+      "name": "NICO reference sheet 2"
+    },
+    {
+      "kind": "metadata",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/model-metadata.json",
+      "sha256": "00fe23726c064c9a79424e4ca09a10db786196e5ce3c00fed097cdb24b28a994",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "model",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/nico.glb",
+      "sha256": "3bfbca80b42e604e7b061f5a07c3b54f2d874ddbd61e406a564a71e69c8d3ae8",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "preview",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/previews/front.png",
+      "sha256": "98cca976bb762f987287df7551afb4bc164ecd11a258e2152097e341e1862a0c",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "preview",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/previews/rear.png",
+      "sha256": "2a497ec017a46cf5932a133e6f932128604b818f18e7ae34d6d329b98c230dfb",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "preview",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/previews/side.png",
+      "sha256": "d6a50dd95d52b9cde970fbbe0a72cdf29ed69d03348cdb670955f7069ed2014a",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "preview",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/previews/wave.metadata.json",
+      "sha256": "813b9e765c45033d10d05690256d24b39ce063a15f440900658e1ad12484fdfe",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "preview",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/previews/wave.mp4",
+      "sha256": "f239448f7aa6dd1760718737138e5f95e5418305201f406217606fd5ab497267",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "preview",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/previews/wave.png",
+      "sha256": "b298f611f1bdf4af2bf2f5d9a80435ce20144d853b38e48177194b832aed191b",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "source",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/sources/Mascot3D.tsx",
+      "sha256": "9b30208ab5f87daa7b3a111d8cc6366571197d98d5305213fba6ef690a37135a",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "source",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/sources/animations.ts",
+      "sha256": "157790cac49d8aedf263c4da7f8420eed351ed2a44a653c876338bf4879b41b1",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "source",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/sources/config.ts",
+      "sha256": "84fdacdaf1b3cad56c4611d2a468038b0e04cd27ae3ba9014e350caf564e7d41",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "source",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/sources/export.ts",
+      "sha256": "2d79737be830171328a28db2de4a6e19b0df2f61b3e937f3f1d264a4c134900d",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "source",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/sources/main.tsx",
+      "sha256": "409e7210968646e945ebaf398da5e5fbe3bca1142653ecf88b29df3c6db4b5bf",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "source",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/sources/model.ts",
+      "sha256": "b3fbf8a26c842aee0883f7d1befba181052eb76304b538af4bf53e9c2b2a1696",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "source",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/sources/types.ts",
+      "sha256": "ec56f55ab7ac39e38331a08fa515a770024a9c9614f36e68503e72ac6320b1df",
+      "status": "generated_candidate"
+    },
+    {
+      "kind": "source",
+      "path": "assets/mascots/nico/1.0.0-candidate.1/sources/validation.ts",
+      "sha256": "5ca3387c2b2cb8e2c4b2fb96578676e35be63f0d849fc9a017ac48d899d3498b",
+      "status": "generated_candidate"
+    }
+  ]
+}

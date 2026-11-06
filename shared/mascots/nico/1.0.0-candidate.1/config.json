@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "nico",
+  "version": "1.0.0-candidate.1",
+  "display_name": "NICO",
+  "status": "candidate",
+  "geometry_version": "lite-humanoid-1.0.0",
+  "animation_version": "lite-rig-1.0.0",
+  "reference_status": "visual_direction_approved_original_files_pending",
+  "palette": {
+    "yellow": "#F5C63D",
+    "navy": "#25344D",
+    "brown": "#433025",
+    "skin": "#C58C65",
+    "pink": "#EBA0A0",
+    "white": "#F1EEE7",
+    "orange": "#F18A41",
+    "gray": "#313A35"
+  },
+  "geometry": {
+    "totalHeight": 2.8,
+    "headWidth": 1,
+    "headHeight": 0.91,
+    "headDepth": 0.8,
+    "headCenterY": 2.23,
+    "bodyWidth": 0.76,
+    "bodyHeight": 0.84,
+    "bodyDepth": 0.46,
+    "limbRadius": 0.12,
+    "headFraction": 0.36,
+    "torsoFraction": 0.3,
+    "legsFeetFraction": 0.34
+  },
+  "roles": {
+    "hoodie": "yellow",
+    "backpack": "navy",
+    "trousers": "navy",
+    "hair": "brown",
+    "skin": "skin",
+    "cheeks": "pink",
+    "sneakers": "white",
+    "shoeSoles": "orange",
+    "pupils": "gray"
+  },
+  "animations": [
+    "idle",
+    "walk",
+    "run",
+    "talk",
+    "point",
+    "wave",
+    "celebrate"
+  ],
+  "performance": {
+    "maxTriangles": 20000,
+    "maxDrawCalls": 100
+  },
+  "consistency": {
+    "randomizedGeometry": false,
+    "allowPerVideoPaletteOverride": false,
+    "requiresExplicitVersion": true,
+    "renderTime": "frame/fps"
+  }
+}

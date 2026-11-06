@@ -1,0 +1,8 @@
+{"models":[
+ {"id":"explorer","name":"Explorador","category":"personagens","kind":"character","preset":"explorer","description":"Personagem original com roupa amarela, pose de apontar e acenar; cores e acabamento do canal.","path":"engine/characters.py","thumbnail":"/model-thumbs/explorer.png"},
+ {"id":"builder","name":"Construtor","category":"personagens","kind":"character","preset":"builder","description":"Capacete, roupa configurável e silhueta legível para montagens.","path":"engine/characters.py","thumbnail":"/model-thumbs/builder.png"},
+ {"id":"scientist","name":"Cientista","category":"personagens","kind":"character","preset":"scientist","description":"Óculos e jaleco sobre a mesma base original de personagem.","path":"engine/characters.py","thumbnail":"/model-thumbs/scientist.png"},
+ {"id":"house_assembly","name":"Casa em montagem","category":"cenarios","kind":"template","description":"Base, paredes, janelas e telhado entram em sequência; câmera com pausas e aproximação.","path":"engine/scene_house.py","thumbnail":"/model-thumbs/house_assembly.png"},
+ {"id":"room_airflow","name":"Sala e circulação de ar","category":"cenarios","kind":"template","description":"Sala original, personagem, ventilador com pás e setas ilustrativas de fluxo.","path":"engine/scene_room.py","thumbnail":"/model-thumbs/room_airflow.png"},
+ {"id":"earth_rotation","name":"Terra em rotação","category":"cenarios","kind":"template","description":"Planeta esquemático, órbita decorativa e câmera de contexto.","path":"engine/scene.py","thumbnail":"/model-thumbs/earth_rotation.png"}
+]}

@@ -1,0 +1,16 @@
+{
+  "id": "nico",
+  "version": "1.0.0-candidate.1",
+  "policy": "immutable_source_requires_new_version",
+  "files": {
+    "mascot-studio/src/model.ts": "b3fbf8a26c842aee0883f7d1befba181052eb76304b538af4bf53e9c2b2a1696",
+    "mascot-studio/src/animations.ts": "157790cac49d8aedf263c4da7f8420eed351ed2a44a653c876338bf4879b41b1",
+    "mascot-studio/src/config.ts": "84fdacdaf1b3cad56c4611d2a468038b0e04cd27ae3ba9014e350caf564e7d41",
+    "mascot-studio/src/types.ts": "ec56f55ab7ac39e38331a08fa515a770024a9c9614f36e68503e72ac6320b1df",
+    "mascot-studio/src/validation.ts": "5ca3387c2b2cb8e2c4b2fb96578676e35be63f0d849fc9a017ac48d899d3498b",
+    "mascot-studio/src/export.ts": "2d79737be830171328a28db2de4a6e19b0df2f61b3e937f3f1d264a4c134900d",
+    "mascot-studio/src/Mascot3D.tsx": "9b30208ab5f87daa7b3a111d8cc6366571197d98d5305213fba6ef690a37135a",
+    "mascot-studio/src/main.tsx": "409e7210968646e945ebaf398da5e5fbe3bca1142653ecf88b29df3c6db4b5bf",
+    "shared/mascots/nico/1.0.0-candidate.1/config.json": "1b6d0616295317335c13793b792d212a7b9b029c51ad0828b0d81e769fde7a60"
+  }
+}

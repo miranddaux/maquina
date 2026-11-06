@@ -1,0 +1,4 @@
+interface:
+  display_name: "CurioLab 3D"
+  short_description: "Roteiro, cenas e MP4 vertical com o NICO versionado."
+  default_prompt: "Use $curiolab-3d para conferir meu projeto, preparar um roteiro original e produzir uma prévia verificável, preservando a identidade do canal e a versão aprovada do mascote."

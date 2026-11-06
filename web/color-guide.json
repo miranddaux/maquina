@@ -1,0 +1,125 @@
+{
+  "title": "Paleta CurioLab: amarelo quente e contraste legível",
+  "working_space": "sRGB",
+  "colors": [
+    {
+      "key": "shirt",
+      "name": "Amarelo da assinatura",
+      "hex": "#E8BE45",
+      "rgb": [
+        232,
+        190,
+        69
+      ],
+      "role": "Reconhecimento do personagem e foco da ação. Não usar como texto fino sobre fundo claro."
+    },
+    {
+      "key": "pants",
+      "name": "Azul de apoio",
+      "hex": "#285878",
+      "rgb": [
+        40,
+        88,
+        120
+      ],
+      "role": "Equilibra a roupa e separa pernas, objetos e ambiente."
+    },
+    {
+      "key": "shoes",
+      "name": "Azul dos detalhes",
+      "hex": "#2E72B8",
+      "rgb": [
+        46,
+        114,
+        184
+      ],
+      "role": "Acento secundário; usar de forma consistente."
+    },
+    {
+      "key": "hair",
+      "name": "Castanho do cabelo",
+      "hex": "#34251E",
+      "rgb": [
+        52,
+        37,
+        30
+      ],
+      "role": "Contraste para o rosto sem depender de preto puro."
+    },
+    {
+      "key": "skin",
+      "name": "Pele quente",
+      "hex": "#DFA16D",
+      "rgb": [
+        223,
+        161,
+        109
+      ],
+      "role": "Material de pele; preservar durante mudanças de cenário e luz."
+    },
+    {
+      "key": "accent_color",
+      "name": "Destaque quente",
+      "hex": "#F2C94C",
+      "rgb": [
+        242,
+        201,
+        76
+      ],
+      "role": "Etiquetas e botões com texto escuro; uma informação principal por vez."
+    }
+  ],
+  "contrasts": [
+    {
+      "foreground": "#292238",
+      "background": "#F6F3E8",
+      "ratio": 13.7,
+      "normal_text_aa": true
+    },
+    {
+      "foreground": "#292238",
+      "background": "#E8BE45",
+      "ratio": 8.61,
+      "normal_text_aa": true
+    },
+    {
+      "foreground": "#FFFFFF",
+      "background": "#E8BE45",
+      "ratio": 1.77,
+      "normal_text_aa": false
+    },
+    {
+      "foreground": "#E8BE45",
+      "background": "#182338",
+      "ratio": 8.89,
+      "normal_text_aa": true
+    }
+  ],
+  "design_principles": [
+    "O amarelo quente é uma escolha de identidade, não uma garantia psicológica de atenção ou retenção.",
+    "Contexto, cultura, iluminação, tarefa e combinação mudam a percepção; evite promessas universais sobre cor.",
+    "60/30/10 é uma orientação de hierarquia visual, não uma medida fixa encontrada em todos os vídeos.",
+    "Mantenha os materiais do personagem; varie cenário e luz. Noite precisa de preenchimento para preservar rosto, olhos e silhueta.",
+    "Contraste WCAG se aplica à leitura de texto e interface. Para personagens 3D, teste silhueta, valor tonal e enquadramento também."
+  ],
+  "sources": [
+    {
+      "title": "W3C CSS Color 4 — sRGB e conversão linear",
+      "url": "https://www.w3.org/TR/css-color-4/",
+      "consulted_source": "https://raw.githubusercontent.com/w3c/csswg-drafts/main/css-color-4/Overview.bs",
+      "status": "consulted"
+    },
+    {
+      "title": "W3C WCAG — Understanding Contrast Minimum",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "consulted_source": "https://raw.githubusercontent.com/w3c/wcag/main/understanding/20/contrast-minimum.html",
+      "status": "consulted"
+    },
+    {
+      "title": "Revisão científica de psicologia das cores — consulta pendente",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23724991/",
+      "status": "network_blocked",
+      "note": "Não foi usada como se tivesse sido lida nesta sessão."
+    }
+  ]
+}
