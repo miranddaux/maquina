@@ -1,15 +1,26 @@
-# CurioLab 3D · skill completa
+# CurioLab 3D · downloads atualizados
 
-Pacote de teste 0.4.0-preview.1 para o canal Nicolume, com o NICO versionado.
+**O ZIP 0.4.0-preview.1 foi retirado dos downloads atuais após relato de alerta do Windows. A identificação da detecção está pendente. Não execute uma cópia bloqueada.** Leia SECURITY.md e WINDOWS-ALERT.json. As distribuições abaixo não têm liberação por antivírus confirmada.
 
-1. Baixe o ZIP desta pasta e extraia todos os arquivos em uma pasta permanente.
-2. Instale Python 3.12+, Blender 4.3+ e FFmpeg/ffprobe se ainda não tiver. Veja docs/INSTALACAO.md.
-3. Abra a pasta extraída no Codex ou Claude Code.
-4. Execute `python INSTALAR-SKILL.py --agent both --scope project` (ou abra INSTALAR-SKILL.bat no Windows).
-5. Inicie uma nova sessão. Use `$curiolab-3d` no Codex ou `/curiolab-3d` no Claude Code.
-6. Execute `python tools/smoke_skill.py` para produzir e verificar um MP4 Full HD novo sem APIs pagas.
-7. Abra o painel com `python tools/launch_panel.py`.
+## Skill textual (aproximadamente 30 KB)
 
-A skill inclui roteiro, storyboard, paleta, regras de câmera, modelos, motor, painel, referências, instalador e manifesto SHA-256. O NICO candidato tem geometria, paleta e animações fixadas; não é recriado por vídeo. Os originais das referências ainda precisam ser arquivados antes da aprovação de produção. SQL é apenas proposta, nunca aplicado pelo instalador.
+`curiolab-3d-skill-0.4.0-preview.2.zip` contém somente Markdown, JSON e YAML: instruções, receita de roteiro/câmera, paleta, referência de configuração do NICO e identidade do canal. Não contém scripts, interface executável ou modelos binários.
 
-O relatório e os vídeos nesta pasta foram produzidos com uma instalação limpa do ZIP no Linux. Vozes ElevenLabs/OpenAI exigem conta, credenciais e créditos próprios; não foram chamadas neste teste. Skill não autentica o assistente nem inclui assinaturas. Windows/macOS e autenticação real ainda precisam de teste no equipamento escolhido. Os vídeos demonstram o teste técnico e estão sem narração.
+Extraia a pasta `curiolab-3d`. Copie-a para `.agents/skills/` no projeto do Codex ou `.claude/skills/` no Claude Code. Inicie uma nova sessão e use `$curiolab-3d` ou `/curiolab-3d`. Essa instalação de documentos não roda um instalador. Gerar vídeo exige o motor separado.
+
+## Motor e painel (aproximadamente 5,8 MB)
+
+`curiolab-3d-runtime-0.4.0-preview.2.zip` contém código Python, fontes da interface, visualizador compilado, NICO e modelos. Não distribui atalhos `.bat`/shell, executáveis nativos, dependências instaladas ou credenciais. Instalação e abertura são explícitas, no terminal da pasta extraída:
+
+```sh
+python INSTALAR-SKILL.py --agent both --scope project
+python tools/launch_panel.py
+```
+
+No Windows, a alternativa é `py -3` no lugar de `python`. Leia docs/INSTALACAO.md. Python 3.12+, Blender 4.3+ e FFmpeg/ffprobe são requisitos separados; não são instalados silenciosamente. Não execute arquivos que o Windows tenha bloqueado nem altere o antivírus para instalar.
+
+## Verificações e limites
+
+Os arquivos `.sha256` e PACKAGE-MANIFEST.json permitem conferir integridade. Testes automatizados conferem o conteúdo dos pacotes e rejeitam executáveis disfarçados. O teste funcional no Linux cria um MP4 1080×1920/30fps sem API paga. Nenhuma dessas verificações substitui Microsoft Defender/SmartScreen. O motivo do alerta original e a aceitação no Windows continuam pendentes do texto da detecção e de validação nesse sistema.
+
+NICO continua candidato para prévia explícita; referências originais e aprovação de produção estão pendentes. ElevenLabs/OpenAI exigem conta e créditos próprios. Não há publicação automática nem migração SQL aplicada.

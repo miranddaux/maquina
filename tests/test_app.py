@@ -51,6 +51,12 @@ class StudioAPI(unittest.TestCase):
         self.assertIn('skills/curiolab-3d/SKILL.md',z.namelist())
         self.assertIn('engine/render.py',z.namelist())
         self.assertFalse(any('.local/' in n or '.env' in n or '__pycache__' in n for n in z.namelist()))
+    def test_document_skill_download_is_separate_from_runtime(self):
+        with self.request('/api/skill/download?kind=skill') as r:
+            self.assertIn('curiolab-3d-skill-',r.headers['Content-Disposition'])
+            z=zipfile.ZipFile(io.BytesIO(r.read()))
+        self.assertIn('curiolab-3d/SKILL.md',z.namelist())
+        self.assertFalse(any(Path(name).suffix.lower() not in {'.md','.json','.yaml','.yml'} for name in z.namelist()))
     def test_invalid_json_payload(self):
         with self.assertRaises(urllib.error.HTTPError) as e:self.request('/api/projects',[])
         self.assertEqual(e.exception.code,400)

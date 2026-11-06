@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 import doctor
 import install_skill as installer
-from package_skill import MANIFEST, build_package, verify_package
+from package_skill import MANIFEST, build_package, collect_files, verify_package
 
 
 class CompleteSkillPackage(unittest.TestCase):
@@ -24,7 +24,7 @@ class CompleteSkillPackage(unittest.TestCase):
     def test_package_contains_executable_skill_and_no_private_state(self):
         with zipfile.ZipFile(io.BytesIO(self.payload)) as archive:
             names = set(archive.namelist())
-            for name in ['SKILL.md', 'INSTALAR-SKILL.py', 'INSTALAR-SKILL.bat',
+            for name in ['SKILL.md', 'INSTALAR-SKILL.py',
                          'tools/smoke_skill.py', 'web/mascot-viewer/index.html',
                          'assets/mascots/nico/1.0.0-candidate.1/nico.glb', MANIFEST]:
                 self.assertIn(name, names)
@@ -32,6 +32,43 @@ class CompleteSkillPackage(unittest.TestCase):
                                  for name in names for part in Path(name).parts))
             self.assertEqual(archive.read('SKILL.md'), archive.read('skills/curiolab-3d/SKILL.md'))
             self.assertIsNone(archive.testzip())
+
+    def test_runtime_has_no_shell_launchers_or_native_executables(self):
+        blocked = {'.bat', '.cmd', '.sh', '.ps1', '.vbs', '.exe', '.dll', '.msi', '.scr', '.com', '.pyd'}
+        with zipfile.ZipFile(io.BytesIO(self.payload)) as archive:
+            self.assertFalse(any(Path(name).suffix.lower() in blocked for name in archive.namelist()))
+            for name in archive.namelist():
+                self.assertFalse(archive.read(name).startswith((b'MZ', b'\x7fELF')))
+        self.assertEqual(self.manifest['antivirus_clearance'], 'not_established')
+
+    def test_document_skill_contains_only_readable_text(self):
+        payload, manifest = build_package(ROOT, kind='skill')
+        with zipfile.ZipFile(io.BytesIO(payload)) as archive:
+            self.assertIn('curiolab-3d/SKILL.md', archive.namelist())
+            self.assertIn('curiolab-3d/references/security.md', archive.namelist())
+            self.assertIn('curiolab-3d/references/production-recipe.md', archive.namelist())
+            self.assertIn('curiolab-3d/references/nico-config.json', archive.namelist())
+            for name in archive.namelist():
+                self.assertIn(Path(name).suffix, {'.md', '.json', '.yaml', '.yml'})
+                archive.read(name).decode('utf8')
+        self.assertEqual(manifest['kind'], 'skill')
+
+    def test_text_skill_rejects_code_in_its_source_folder(self):
+        with tempfile.TemporaryDirectory() as temp:
+            source = Path(temp) / 'skills/curiolab-3d'
+            source.mkdir(parents=True)
+            (source / 'SKILL.md').write_text('---\nname: curiolab-3d\n---\n')
+            (source / 'unexpected.py').write_text('print(1)')
+            with self.assertRaisesRegex(ValueError, 'código ou binários'):
+                collect_files(temp, kind='skill')
+
+    def test_disguised_native_binary_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            source = Path(temp) / 'skills/curiolab-3d'
+            source.mkdir(parents=True)
+            (source / 'SKILL.md').write_bytes(b'MZdisguised document')
+            with self.assertRaisesRegex(ValueError, 'Executável nativo'):
+                collect_files(temp, kind='skill')
 
     def test_integrity_verification_detects_modified_runtime(self):
         with tempfile.TemporaryDirectory() as temp:

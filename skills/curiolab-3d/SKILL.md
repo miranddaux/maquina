@@ -16,6 +16,8 @@ Trabalhe em português do Brasil. A pessoa conversa com o Claude Code ou Codex; 
 
 ## Instalação completa e teste da skill
 
+A distribuição separa agora skill textual e motor. O pacote textual contém apenas Markdown/JSON/YAML e depende do motor separado para gerar MP4. Leia `references/security.md` e `SECURITY.md` na raiz do motor: um alerta do Windows foi relatado para 0.4.0-preview.1 e ainda não foi classificado. Não recomendar a versão retirada, executar arquivos bloqueados, desativar proteções ou chamar testes funcionais de liberação antivírus.
+
 O pacote completo traz este SKILL.md, referências, painel, motor, modelos, visualizador compilado e instalador. Instale a partir da raiz com `python INSTALAR-SKILL.py --agent both --scope project`. O Codex recebe `.agents/skills/curiolab-3d` e o Claude Code recebe `.claude/skills/curiolab-3d`. Ambos guardam um ponteiro para o motor desta pasta. Uma nova sessão do assistente precisa carregar a skill; copiar arquivos não autentica uma conta nem altera retroativamente o catálogo da sessão atual.
 
 O instalador verifica `PACKAGE-MANIFEST.json` quando extraído do ZIP, é repetível quando o conteúdo é idêntico e recusa substituir uma instalação diferente sem `--replace`, que faz backup. Nunca aplique a migração SQL, instale ferramentas externas ou conecte APIs silenciosamente. `--scope user` é opcional, para uma instalação global deliberada.

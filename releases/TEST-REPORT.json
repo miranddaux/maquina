@@ -9,13 +9,12 @@
     "request_lifecycle": true,
     "native_full_hd": true,
     "complete_decode": true,
-    "gallery": true,
-    "nico_candidate_capture": true
+    "gallery": true
   },
   "package": {
     "status": "verified",
-    "version": "0.4.0-preview.1",
-    "files_verified": 138
+    "version": "0.4.0-preview.2",
+    "files_verified": 137
   },
   "nico_pin": {
     "id": "nico",
@@ -27,35 +26,36 @@
   "editorial_review_pending": true,
   "test_environment": "Linux; Python 3.12.14; Blender 4.3.2; FFmpeg 7.1.5",
   "unit_tests": {
-    "run": 49,
-    "passed": 45,
+    "run": 54,
+    "passed": 50,
     "skipped_opencv": 4
   },
-  "installation_paths": [
-    ".agents/skills/curiolab-3d",
-    ".claude/skills/curiolab-3d"
-  ],
   "native_video": {
-    "file": "skill-fullhd-a47f6bb3.mp4",
     "width": 1080,
     "height": 1920,
     "fps": 30,
     "duration_seconds": 3,
-    "silent": true
-  },
-  "nico_video": {
-    "file": "nico-skill-a47f6bb3.mp4",
-    "width": 1080,
-    "height": 1920,
-    "fps": 30,
-    "duration_seconds": 1,
     "silent": true,
-    "candidate": true
+    "sha256": "61bcbf5bc86d19e918ecbca61309bf9b3f081b71ce888f8a687d2af29d4b7be2"
+  },
+  "antivirus_clearance": "not_established",
+  "windows_alert_status": "unclassified_pending_alert_details",
+  "microsoft_defender_scan": "not_run_no_windows_host",
+  "text_skill": {
+    "files_without_manifest": 11,
+    "bytes": 29982,
+    "allowed_extensions": [
+      ".md",
+      ".json",
+      ".yaml",
+      ".yml"
+    ]
   },
   "not_tested": [
-    "Windows/macOS installation",
-    "Authenticated assistant account or session reload",
-    "Real ElevenLabs/OpenAI generation",
-    "Browser download in the user interface"
+    "Windows or macOS execution",
+    "Microsoft Defender or SmartScreen",
+    "Other antivirus engines",
+    "Authenticated assistant reload",
+    "Real ElevenLabs/OpenAI generation"
   ]
 }

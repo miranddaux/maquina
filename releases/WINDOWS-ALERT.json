@@ -1,0 +1,26 @@
+{
+  "reported_by": "user",
+  "platform": "Windows",
+  "affected_release": "0.4.0-preview.1",
+  "filename": "curiolab-3d-0.4.0-preview.1.zip",
+  "sha256": "130377315a9714f62b1814ade3e3ce2e06313a34eda5d4ffcc46be687686780b",
+  "status": "unclassified_pending_alert_details",
+  "detection_name": null,
+  "affected_inner_file": null,
+  "withdrawn_from_current_downloads": true,
+  "new_packages_antivirus_clearance": "not_established",
+  "microsoft_defender_scan": "not_run_no_windows_host",
+  "local_antivirus_scan": "not_run_no_installed_engine",
+  "changes": [
+    "Separate text-only skill from runtime",
+    "Remove batch/shell launchers from distribution",
+    "Reject native executable magic",
+    "Allow only known package file types",
+    "Keep source and SHA-256 manifests visible"
+  ],
+  "does_not_prove": [
+    "False positive",
+    "Confirmed malware",
+    "Approval by Microsoft Defender/SmartScreen"
+  ]
+}

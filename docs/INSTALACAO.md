@@ -4,7 +4,9 @@ O pacote contém um painel local, modelos procedurais, renderizadores e uma skil
 
 ## 1. Extraia o pacote completo
 
-Descompacte o ZIP em uma pasta permanente de sua conta. Não mova apenas o arquivo SKILL.md: o motor e o painel precisam continuar juntos. Faça backup de uma versão anterior antes de trocar. Seus projetos e credenciais ficam em `.local`; não publique essa pasta.
+Descompacte o ZIP do motor (`curiolab-3d-runtime-*.zip`) em uma pasta permanente de sua conta. O ZIP menor (`curiolab-3d-skill-*.zip`) contém somente instruções e não substitui o motor. Faça backup de uma versão anterior antes de trocar. Seus projetos e credenciais ficam em `.local`; não publique essa pasta.
+
+O Windows gerou um alerta para o pacote 0.4.0-preview.1 segundo relato do usuário, ainda sem identificação da detecção. Esse pacote foi retirado dos downloads atuais. A distribuição nova separa documentos do motor e remove atalhos `.bat`/shell, sem alterar configurações do antivírus. Isso não prova a causa nem uma liberação pelo Microsoft Defender; veja `SECURITY.md`. Não rode uma cópia bloqueada.
 
 ## 2. Prepare as ferramentas
 
@@ -28,13 +30,13 @@ Em sistemas que usam `python3`, substitua `python` por `python3`. O diagnóstico
 
 ## 3. Abra o painel
 
-No Windows, abra `ABRIR-PAINEL.bat`. No macOS/Linux, execute `bash ABRIR-PAINEL.sh`. Alternativa pelo terminal:
+No terminal aberto na pasta do motor, execute:
 
 ```sh
 python tools/launch_panel.py
 ```
 
-Mantenha a janela do lançador aberta durante o uso. O painel usa somente conexão local. Se houver uma instância CurioLab em execução, o lançador a reutiliza; se a porta estiver ocupada por outro programa, procura uma livre. `--no-browser` inicia sem abrir navegador, e `--check-only` apenas diagnostica.
+No Windows, use `py -3 tools/launch_panel.py` se `python` não estiver no PATH; em macOS/Linux use `python3` quando necessário. Os atalhos `.bat` e shell não fazem parte da distribuição atual. Mantenha a janela do lançador aberta durante o uso. O painel usa somente conexão local. Se houver uma instância CurioLab em execução, o lançador a reutiliza; se a porta estiver ocupada por outro programa, procura uma livre. `--no-browser` inicia sem abrir navegador, e `--check-only` apenas diagnostica.
 
 ## 4. Escolha Claude Code ou Codex
 
@@ -49,7 +51,7 @@ O CurioLab não instala nem conecta sua conta de IA automaticamente. Abra a past
 python INSTALAR-SKILL.py --agent both --scope project
 ```
 
-No Windows, `INSTALAR-SKILL.bat` encontra Python/py. No macOS/Linux, use `bash INSTALAR-SKILL.sh`. Os lançadores padrão instalam para ambos os assistentes dentro do projeto e não mudam o perfil global. É possível selecionar `--agent codex` ou `--agent claude`.
+No Windows, a alternativa é `py -3 INSTALAR-SKILL.py --agent both --scope project`. Em macOS/Linux use `python3` se necessário. Nenhum arquivo se executa ao extrair o ZIP. O instalador precisa ser chamado explicitamente e não modifica o perfil global por padrão. É possível selecionar `--agent codex` ou `--agent claude`.
 
 A skill vai para `.agents/skills/curiolab-3d` no Codex e `.claude/skills/curiolab-3d` no Claude Code. Cada cópia guarda `CURIOLAB_ROOT.txt` com a pasta completa. Repetir a instalação idêntica não sobrescreve nada. Uma versão diferente exige `--replace`, preservando backup. O ZIP traz `PACKAGE-MANIFEST.json`: arquivos alterados ou ausentes impedem a instalação, sem ocultar a falha.
 

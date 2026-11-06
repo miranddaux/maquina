@@ -7,7 +7,7 @@ Ferramenta em português para criar projetos verticais, preparar roteiros e expo
 **Instalação completa da skill:** extraia o pacote, abra a pasta no assistente e execute `python INSTALAR-SKILL.py`. O padrão instala para Codex e Claude Code apenas neste projeto, sem modificar credenciais ou perfis globais. Depois inicie uma nova sessão e use `$curiolab-3d` (Codex) ou `/curiolab-3d` (Claude Code). Execute `python tools/smoke_skill.py` para validar o fluxo com um MP4 Full HD novo, sem APIs pagas; detalhes em `docs/INSTALACAO.md`.
 
 1. Leia `docs/INSTALACAO.md` e execute `python tools/doctor.py`.
-2. Abra `ABRIR-PAINEL.bat` no Windows ou `bash ABRIR-PAINEL.sh` no macOS/Linux. O lançador também funciona com `python tools/launch_panel.py`.
+2. No terminal da pasta extraída, abra o painel com `python tools/launch_panel.py` (Windows: `py -3 tools/launch_panel.py`; macOS/Linux: `python3 tools/launch_panel.py`). Os pacotes atuais não distribuem atalhos `.bat`/shell nem executáveis nativos.
 3. Instale a skill no assistente escolhido: `python tools/doctor.py --install-skill --agent claude` ou `--agent codex`. Autentique sua conta no aplicativo do assistente; a skill não concede uma assinatura.
 4. Em **Meu canal**, salve identidade, receita, personagem, cores RGB e voz. Há uma prévia3D real do perfil salvo. A roupa padrão é amarelo quente #E8BE45; os templates recebem o snapshot de branding.
 5. Em **Comece aqui**, prepare o pedido. Leve a instrução ao Claude Code/Codex para pesquisar, escrever e produzir. O painel acompanha os arquivos e mostra os resultados em **Vídeos**.
@@ -74,6 +74,8 @@ A coleta pública do YouTube também permanece bloqueada; `python tools/analyze_
 ## Skill e próximos passos comerciais
 
 O botão “Baixar skill” monta o pacote com o estúdio, motor, skill e documentação. Não inclui credenciais, projetos privados, binários de terceiros ou créditos de API. Instalação em `skills/curiolab-3d/references/production.md`.
+
+Há duas entregas: a skill textual (`curiolab-3d-skill-*.zip`) contém apenas Markdown/JSON/YAML; o motor (`curiolab-3d-runtime-*.zip`) contém Python, interface e ativos. A skill textual precisa de um motor instalado para gerar MP4. A versão 0.4.0-preview.1 foi retirada dos downloads atuais após relato de alerta do Windows; o nome da detecção ainda não foi fornecido. Integridade SHA-256 e testes funcionais não equivalem a liberação por antivírus. Leia `SECURITY.md`; não execute arquivos bloqueados nem desative proteções para instalar.
 
 ElevenLabs via API é opcional em `integrations/elevenlabs.py`. Ainda não foi testado com conta real. Configure credenciais apenas em ajustes seguros, nunca no repositório; a chamada pode consumir créditos.
 

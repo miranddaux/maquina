@@ -367,11 +367,13 @@ class Handler(SimpleHTTPRequestHandler):
                 with LOCK: job=JOBS.get(route.rsplit('/',1)[-1])
                 return self.send_json(job or {'error':'Renderização não encontrada.'},200 if job else 404)
             if route=='/api/skill/download':
-                from tools.package_skill import build_package, FILENAME
-                data,_=build_package(ROOT)
+                from tools.package_skill import build_package, FILENAME, VERSION
+                kind=parse_qs(urlsplit(self.path).query).get('kind',['runtime'])[0]
+                data,_=build_package(ROOT,kind=kind)
+                filename=FILENAME if kind=='runtime' else 'curiolab-3d-skill-'+VERSION+'.zip'
                 self.send_response(200)
                 self.send_header('Content-Type','application/zip')
-                self.send_header('Content-Disposition','attachment; filename="'+FILENAME+'"')
+                self.send_header('Content-Disposition','attachment; filename="'+filename+'"')
                 self.send_header('Content-Length',str(len(data)))
                 self.end_headers();self.wfile.write(data);return
             if route.startswith('/outputs/'):
