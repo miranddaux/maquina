@@ -3,8 +3,7 @@
   "platform": "Windows",
   "affected_release": "0.4.0-preview.1",
   "filename": "curiolab-3d-0.4.0-preview.1.zip",
-  "sha256": "130377315a9714f62b1814ade3e3ce2e06313a34eda5d4ffcc46be687686780b",
-  "status": "unclassified_pending_alert_details",
+  "status": "browser_download_block_confirmed_threat_identity_pending",
   "detection_name": null,
   "affected_inner_file": null,
   "withdrawn_from_current_downloads": true,
@@ -22,5 +21,14 @@
     "False positive",
     "Confirmed malware",
     "Approval by Microsoft Defender/SmartScreen"
-  ]
+  ],
+  "expected_release_sha256": "130377315a9714f62b1814ade3e3ce2e06313a34eda5d4ffcc46be687686780b",
+  "actual_blocked_download_sha256": null,
+  "observed_alert": {
+    "evidence": "user-provided screenshot",
+    "location": "browser recent download history",
+    "message": "Vírus detectado",
+    "displayed_filename": "curiolab-3d-0.4.0-preview.1.zip"
+  },
+  "triggering_security_product": null
 }

@@ -1,6 +1,6 @@
 # Alerta do Windows e distribuição
 
-O usuário relatou que o Windows marcou o ZIP 0.4.0-preview.1 como vírus. Ainda não informou o texto exato, o nome da ameaça, o componente que bloqueou ou o arquivo interno apontado. A causa está **sem confirmação**. Não classificar como falso positivo nem como malware confirmado sem evidência.
+O print enviado pelo usuário mostra o histórico de downloads do navegador com “Vírus detectado” para o ZIP 0.4.0-preview.1. Ainda não estão identificados o nome da ameaça, o produto de segurança que acionou o bloqueio nem o arquivo interno apontado. A causa está **sem confirmação**. Não classificar como falso positivo nem como malware confirmado sem evidência.
 
 SHA-256 do pacote relatado: `130377315a9714f62b1814ade3e3ce2e06313a34eda5d4ffcc46be687686780b`.
 
